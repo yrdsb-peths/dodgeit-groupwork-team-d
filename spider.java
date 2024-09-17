@@ -10,6 +10,13 @@ public class spider extends Actor
         {
             resetSpider();
         }
+        
+        if(isTouching(Hero.class))
+        {
+            gameOver skull = new gameOver();
+            getWorld().addObject(skull, 300, 200);
+            getWorld().removeObject(this);
+        }
     }
     
     public void resetSpider()
@@ -22,4 +29,5 @@ public class spider extends Actor
             setLocation(600, 300);
         }
     }
+
 }
