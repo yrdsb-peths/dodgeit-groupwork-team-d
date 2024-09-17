@@ -4,7 +4,7 @@ public class spider extends Actor
 {
     public void act()
     {
-        move(-4);
+        move(-5);
         
         if(getX() <= 0)
         {
