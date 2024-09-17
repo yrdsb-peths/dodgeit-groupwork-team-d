@@ -13,8 +13,8 @@ public class spider extends Actor
         
         if(isTouching(Hero.class))
         {
-            Label gameEnd = new Label("Thanks for playing!" , 50);
-            getWorld().addObject(gameEnd, 300, 250);
+            Label gameEnd = new Label("Thanks for playing!",50);
+            getWorld().addObject(gameEnd, 300, 350);
             
             gameOver skull = new gameOver();
             getWorld().addObject(skull, 300, 200);
