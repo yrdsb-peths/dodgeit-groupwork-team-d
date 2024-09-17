@@ -21,7 +21,7 @@ public class MyWorld extends World
         Hero hero = new Hero();
         addObject(hero,100,100);
         
-        spider spider = new spider();
+        Spider spider = new Spider();
         addObject(spider, 600, 100);
     }
 }
