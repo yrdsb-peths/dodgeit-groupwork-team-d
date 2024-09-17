@@ -1,8 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Spider extends Actor
+public class spider extends Actor
 {
-    
     public void act()
     {
         move(-4);
@@ -14,7 +13,9 @@ public class Spider extends Actor
         
         if(isTouching(Hero.class))
         {
-            restart();
+            gameOver skull = new gameOver();
+            getWorld().addObject(skull, 300, 200);
+            getWorld().removeObject(this);
         }
     }
     
@@ -29,14 +30,4 @@ public class Spider extends Actor
         }
     }
 
-    public void restart()
-    {
-        Label gameEnd = new Label("Thanks for playing!" , 50);
-        getWorld().addObject(gameEnd, 300, 200);
-        
-        GameOver skull = new GameOver();
-        getWorld().addObject(skull, 300, 250);
-        getWorld().removeObject(this);
-        
-    }
 }
